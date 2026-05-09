@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import RecordGallery from './components/RecordGallery';
 import RecordForm from './components/RecordForm';
 import EditModal from './components/EditModal';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 import { getRecords, createRecord, updateRecord, deleteRecord, checkHealth } from './services/api';
 
 export default function App() {
@@ -81,11 +83,11 @@ export default function App() {
         </section>
 
         <RecordForm onCreated={handleCreate} />
+
+        <ContactForm />
       </main>
 
-      <footer className="bg-dark text-white text-center py-3">
-        <p className="mb-0">Guinness World Records © {new Date().getFullYear()}</p>
-      </footer>
+      <Footer />
 
       {editingRecord && (
         <EditModal
